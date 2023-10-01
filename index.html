@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #output {
+      font-size: 18px;
+      margin: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Array Methods Demo</h1>
+  
+  <button id="arrayLengthButton">Array Length</button>
+  <button id="arrayToStringButton">Array toString()</button>
+  <button id="arrayPopButton">Array pop()</button>
+  
+  <p id="output"></p>
+
+  <script>
+    // Sample array
+    var myArray = [1, 2, 3, 4, 5];
+
+    // Function to display array length
+    document.getElementById("arrayLengthButton").addEventListener("click", function() {
+      var length = myArray.length;
+      document.getElementById("output").innerText = "Array length: " + length;
+    });
+
+    // Function to display array as a string
+    document.getElementById("arrayToStringButton").addEventListener("click", function() {
+      var arrayString = myArray.toString();
+      document.getElementById("output").innerText = "Array as String: " + arrayString;
+    });
+
+    // Function to pop an element from the array
+    document.getElementById("arrayPopButton").addEventListener("click", function() {
+      var poppedElement = myArray.pop();
+      document.getElementById("output").innerText = "Popped Element: " + poppedElement;
+    });
+  </script>
+</body>
+</html>
